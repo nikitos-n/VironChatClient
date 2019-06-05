@@ -1,0 +1,12 @@
+.centringDiv {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 37vh;
+    background-color: aqua;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
