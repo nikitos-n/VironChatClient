@@ -2,12 +2,15 @@ import React from 'react';
 import AuthorizationDiv from './AuthorizationDiv';
 import './App.css'; 
 
-function App() {
-  return (
-    <div>
+class App extends React.Component{
+
+  render(){
+    return (
+      <div>
         <AuthorizationDiv  />
       </div>
-  );
+    );
+  }
 }
 
 export default App;
