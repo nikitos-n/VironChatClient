@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Enter extends React.Component{
+    
     render(){
         return(
             <div className="container">

@@ -17,6 +17,7 @@ class GoogleSignIn extends React.Component{
       signIn = () => {
         const _authOK = (googleUser) => {
           console.log('Authorization Completed!');
+          console.log(googleUser);
           this.setState({
             name: googleUser.getBasicProfile().getName()
           })
