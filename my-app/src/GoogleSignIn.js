@@ -1,47 +1,33 @@
 import React from 'react';
+import GoogleLogin from 'react-google-login';
+import axios from 'axios';
 
-class GoogleSignIn extends React.Component{
+class GoogleSignIn extends React.Component {
     
-    state = {
-        name: null,
-      }
-    
-      componentDidMount(){
-        window.gapi.load('auth2', function(){
-          window.gapi.auth2.init({
-            client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID
-          }).then(() => console.log('Init Ok!'), () => console.log('Init with ERROR!'))
-        })
-      }
-    
-      signIn = () => {
-        const _authOK = (googleUser) => {
-          console.log('Authorization Completed!');
-          console.log(googleUser);
-          this.setState({
-            name: googleUser.getBasicProfile().getName()
-          })
-        };
-        const _authEr = () => console.log('Authorization ERROR');
-    
-        const GoogleAuth = window.gapi.auth2.getAuthInstance();
-        GoogleAuth.signIn({
-          scope: 'profile email',
-        }).then(_authOK, _authEr);
-      }
-      
+  responseGoogle = (response) => {
+      console.log(response);
+      axios.post("http://localhost:3001/", response.Zi)//Получили токен и отправлем axios 
+        .then((response) => {//Ответ от сервера
+          console.log(response.data);
+        });
+    }
+
 
     render() {
-        const {name} = this.state;
-        return(
-            <div className="container">
-                <div className="row justify-content-center">
-                    {name && <p>Приветствуем тебя {name} в нашем чате!</p>}
-                    <button type="button" class="btn btn-danger" onClick={this.signIn}>Войти через Google</button>
-                </div>
-            </div>
+     return ( 
+        <div className = "container" >
+          <div className = "row justify-content-center" > 
+           
+          <GoogleLogin
+            clientId="546694221893-u0otjmu2mtv0ughim8pmac70mnkgkdgl.apps.googleusercontent.com"
+            buttonText="Login"
+            onSuccess={this.responseGoogle}
+            cookiePolicy={'single_host_origin'}
+          />
+          </div> 
+        </div>
         )
+      }
     }
-}
 
-export default GoogleSignIn;
+    export default GoogleSignIn;
