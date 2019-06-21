@@ -5,6 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: darkcyan !important;
+  font-weight: bold;
+  cursor: default;
 }
 
 code {

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Email.css'
 
-class Email extends React.Component{
+class Email extends Component{
     render(){
         return(
             <div className="container">
@@ -10,7 +10,7 @@ class Email extends React.Component{
                         <form>
                             <div className="form-group">
                                 <label for="exampleInputEmail1" style={{color: "white"}}>Адресс электронной почты</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите адресс электронной почты" />
+                                <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Введите адресс электронной почты" />
                                 <small id="emailHelp" className="form-text text-muted">Вход через почту</small>
                             </div>
                         </form>

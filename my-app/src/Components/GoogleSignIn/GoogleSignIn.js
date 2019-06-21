@@ -1,34 +1,31 @@
-import React from 'react';
+import React, {Component} from 'react';
 import GoogleLogin from 'react-google-login';
 import axios from 'axios';
 
-class GoogleSignIn extends React.Component {
 
-  constructor(){
-    super();
-    this.setState({
-      visible: true
-    })
-  }
-    
+class GoogleSignIn extends Component {
+
   responseGoogle = (response) => {
+    const {toMainPage} = this.props;
       const tokenID = response.tokenId;
-      // console.log(tokenID);
+      console.log(response);
       axios.post("http://localhost:3001/", {tokenID})//Получили токен и отправлем axios 
         .then((response) => {//Ответ от сервера(распакованный)
+          console.log(response.data);
           const name = response.data.given_name;
           const surname = response.data.family_name;
-          console.log({name, surname});
-          this.renderRooms();
+          const picture = response.data.picture;
+          const email = response.data.email;
+          localStorage.setItem('myUserName', name);
+          localStorage.setItem('myUserSurname', surname);
+          localStorage.setItem('myUserEmail', email);
+          localStorage.setItem('myUserPicture', picture);
+          toMainPage();
         });
     }
 
-    renderRooms = () =>{
-      this.visible=false;
-    }
-
     render() {
-     return ( 
+     return (
         <div className = "container" >
           <div className = "row justify-content-center" >   
           <GoogleLogin
@@ -42,4 +39,4 @@ class GoogleSignIn extends React.Component {
       }
     }
 
-    export default GoogleSignIn;
+export default GoogleSignIn;

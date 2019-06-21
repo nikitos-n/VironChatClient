@@ -1,0 +1,17 @@
+#row-2 {
+    height: 8vh;
+    width: 100%;
+    margin: 10px 0;
+    transition: border .5s linear;
+    transition: color .5s linear;
+    font-size: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#row-2:hover{
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+} 

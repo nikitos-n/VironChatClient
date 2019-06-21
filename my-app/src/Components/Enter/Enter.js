@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Enter extends React.Component{
+class Enter extends Component{
     
     render(){
         return(
