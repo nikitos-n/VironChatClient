@@ -3,15 +3,11 @@ import './VerticalSideBar.css'
 
 
 class VerticalSideBar extends Component{
-
-
     render(){
         const {MakeVisible, name} = this.props;
         return(
-            <div className="container-fluid">
-                <div className="row no-gutters">
-                    <div id="row-2" className=".buttons" onClick={MakeVisible}>{name}</div>
-                </div>
+            <div className="mainMenu">
+                <div className="menuComponents" onClick={MakeVisible}>{name}</div>
             </div>
         )
     }

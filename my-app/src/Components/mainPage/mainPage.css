@@ -1,0 +1,45 @@
+.mainPagePosition {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  background: #2c2d2d; }
+
+.module {
+  width: 30vw;
+  background: linear-gradient(to top, #2ecc71, #3498db);
+  padding: 4px; }
+
+.leftColumn {
+  background: #191919;
+  color: #FFFFFF;
+  padding: 10px;
+  padding-left: 40px;
+  height: 100vh;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace; }
+
+.rightColumn {
+  height: 100vh;
+  width: 70vw;
+  background: #2c2d2d; }
+
+@media (max-width: 1300px) {
+  .module {
+    width: 40vw; }
+  .rightColumn {
+    width: 60vw; } }
+
+@media (max-width: 700px) {
+  .rightColumn {
+    width: 0vw;
+    visibility: hidden;
+    height: 0vh; }
+  .module {
+    width: 100%; }
+  .mainPagePosition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; } }

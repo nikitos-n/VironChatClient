@@ -1,22 +1,29 @@
 import React, {Component} from 'react';
-import Authorization from '../Authorization/Authorization';
-import Email from '../Email/Email';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
-import Enter from '../Enter/Enter';
 import './AuthorizationDiv.css'; 
-
+import FacebookSignIn from '../FacebookSignIn/FacebookSignIn';
+import Registrate from '../Registrate/Registrate';
 
 class AuthorizationDiv extends Component{
+        
     toMainPage = () => {
         this.props.history.push('/mainPage');
     }
+
     render(){
         return(
-            <div className="centringDiv">
-                <Authorization />
-                <Email />
-                <GoogleSignIn toMainPage={this.toMainPage}/>
-                <Enter />
+            <div className="box">
+                <form action="http://localhost:3001/" method="post">
+                    <h1>Вход</h1>
+                    <input type="text" name="" placeholder="Логин" />
+                    <input type="password" name="" placeholder="Пароль" />
+                    <input type="submit" name="" value="Войти" />
+                    <div className="SignIn">
+                        <GoogleSignIn toMainPage={this.toMainPage} />
+                        <FacebookSignIn />
+                    </div>
+                    <Registrate />
+                </form>
             </div>
         );
     }

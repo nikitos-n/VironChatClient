@@ -1,0 +1,53 @@
+.class1 {
+  all: unset;
+  font-size: 0;
+  border-radius: 24px;
+  color: #191919;
+  padding: 0;
+  width: 200px;
+  outline: none !important; }
+
+.FacebookButton {
+  background: none;
+  border: 2px solid #4169E0;
+  color: #808080;
+  background: none;
+  display: block;
+  font-size: 16px;
+  padding: 12px;
+  text-align: center;
+  width: 200px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  transition: .25s; }
+  .FacebookButton:hover {
+    background: #4169E0;
+    border-color: #FFFFFF;
+    color: #FFFFFF; }
+
+@media (max-width: 490px) {
+  .class1 {
+    width: 135px; }
+  .FacebookButton {
+    width: 135px;
+    padding: 12px 11px; } }
+
+@media (max-width: 415px) {
+  .class1 .FacebookButton {
+    width: 125px; }
+  .FacebookButton {
+    width: 125px; } }
+
+@media (max-width: 360px) {
+  .class1 .FacebookButton {
+    width: 115px; }
+  .FacebookButton {
+    width: 115px; } }
+
+@media (max-width: 340px) {
+  .class1 .FacebookButton {
+    width: 115px; }
+  .FacebookButton {
+    width: 115px; } }

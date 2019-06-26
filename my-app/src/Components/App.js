@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Router, Route} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
-import mainPage from './GoogleSignIn/mainPage/mainPage';
+import mainPage from './mainPage/mainPage';
 import AuthorizationDiv from './AuthorizationDiv/AuthorizationDiv';
 
 const history = createBrowserHistory();

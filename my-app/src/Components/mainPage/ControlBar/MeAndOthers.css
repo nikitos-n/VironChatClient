@@ -1,0 +1,28 @@
+.PersonalInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.avatarModule {
+    background: linear-gradient(to top, #FF0000, #1E90FF);
+    position: relative;
+    border-radius: 50px;
+    padding: 4px;
+}
+
+.myAvatar {
+    border-radius: 50px;
+}
+
+.myName {
+    margin: 10px 45px;
+}
+
+@media (max-width: 960px) {
+    .PersonalInfo { font-size: 20px; padding: 0px; margin-bottom: 40px; }
+    .myAvatar { height: 70px; }
+    .myName { margin: 10px; }
+}

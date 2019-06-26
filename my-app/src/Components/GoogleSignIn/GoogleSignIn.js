@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import GoogleLogin from 'react-google-login';
+import './GoogleSignIn.css';
 import axios from 'axios';
 
 
@@ -26,14 +27,18 @@ class GoogleSignIn extends Component {
 
     render() {
      return (
-        <div className = "container" >
-          <div className = "row justify-content-center" >   
+       <div>
           <GoogleLogin
             clientId="546694221893-u0otjmu2mtv0ughim8pmac70mnkgkdgl.apps.googleusercontent.com"
-            buttonText="Login"
+            render={renderProps => (
+              <div className="GoogleButton" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                 <i class="fab fa-google-plus-g"> Войти через Google</i>
+              </div>
+
+            )}
+            buttonText="Войти через Google"
             onSuccess={this.responseGoogle}
             cookiePolicy={'single_host_origin'} />
-          </div> 
         </div>
         )
       }

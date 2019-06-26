@@ -1,0 +1,47 @@
+.mainMenu {
+    padding: 10px;
+}
+
+.menuComponents {
+    height: 8vh;
+    margin: 10px 0;
+    background: #191919;
+    color: gray;
+    transition: .5s;
+    font-size: 40px;
+    padding: 10px 20px; 
+    cursor: pointer;
+}
+
+.menuComponents:hover{
+    border: 2px solid yellowgreen;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+} 
+
+.menuComponents:active{
+    border: 2px solid #d411db;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+} 
+
+@media (max-width: 1300px) {
+    .mainMenu { padding: 5px; }
+    .menuComponents { font-size: 25px; padding: 5px 10px; }
+}
+
+@media (max-width: 720px) {
+    .mainMenu { padding: 5px; }
+    .menuComponents { font-size: 20px; padding: 5px 10px; }
+}
+
+@media (max-width: 700px) {
+    .menuComponents {font-size: 40px; }
+    .menuComponents:active { border-color: yellowgreen; }
+}
+
+@media (max-width: 340px) {
+    .menuComponents {font-size: 30px; }
+}
