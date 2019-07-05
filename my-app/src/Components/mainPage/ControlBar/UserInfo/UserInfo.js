@@ -7,7 +7,7 @@ export default class UsersInfo extends Component{
         const {UsersArr} = this.props;
         return(
             <div className = {this.props.isVisible ? '' : 'notVisible'}>
-                <div className = 'container-fluid'>
+                <div>
                     {UsersArr.map((value, index) => 
                         <EachUser key = {index} avatar={value.picture} name={value.name} surname={value.surname} 
                         email={value.email} /> 

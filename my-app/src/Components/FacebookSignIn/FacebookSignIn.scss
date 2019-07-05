@@ -3,50 +3,31 @@
 
 
 .class1 {
+    flex: 1;
     all: unset;
     font-size: 0;
     border-radius: 24px;
     color: $blackCol;
     padding: 0;
-    width: 200px;
     outline: none !important;
 }
 
 .FacebookButton {
-    @include SignIn(none, $facebookBlue, $facebookBlue, $white, $grey, $white);
-    background: none;
-    display: block;
+    @include SignIn($facebookBlue, $facebookBlue);
     font-size: 16px;
-    padding: 12px;
-    text-align: center;
-    width: 200px;
-    outline: none;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-    transition: .25s;
 }
 
-@media (max-width: 490px) {
-    .class1 { 
-        width: 135px; 
-    }
-    .FacebookButton { 
-        width: 135px; 
-        padding: 12px 11px; 
-    }
-}
-@media (max-width: 415px) {
-    .class1 .FacebookButton{ width: 125px; }
-    .FacebookButton { width: 125px; }
-}
-
-@media (max-width: 360px) {
-    .class1 .FacebookButton{ width: 115px; }
-    .FacebookButton { width: 115px; }
+@media (max-width: 410px) {
+    .class1 { width: 160px; }
+    .FacebookButton { width: 160px; }
 }
 
 @media (max-width: 340px) {
-    .class1 .FacebookButton{ width: 115px; }
-    .FacebookButton { width: 115px; }
+    .class1 { width: 140px; }
+    .FacebookButton { width: 140px; }
+}
+
+@media (max-width: 310px) {
+    .class1 { width: 100px; }
+    .FacebookButton { width: 100px; }
 }

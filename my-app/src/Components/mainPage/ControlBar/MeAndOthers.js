@@ -6,10 +6,14 @@ class MeAndOthers extends Component {
         const NameOfUser = localStorage.getItem('myUserName');
         const SurnameOfUser = localStorage.getItem('myUserSurname');
         const PictureOfUser = localStorage.getItem('myUserPicture');
+        const EmailOfUser = localStorage.getItem('myUserEmail');
         return (
                 <div className="PersonalInfo">
-                    <div className="avatarModule"><img className="myAvatar" src={PictureOfUser} alt=""/></div>
-                    <div className="myName">{NameOfUser} {SurnameOfUser}</div>
+                    <div className="PersonEnterModule">
+                        <div className="avatarModule"><img className="myAvatar" src={PictureOfUser} alt=""/></div>
+                        <div className="personData NS">{NameOfUser} {SurnameOfUser}</div>
+                        <div className="personData EM">{EmailOfUser}</div>
+                    </div>
                 </div> 
         )
     }

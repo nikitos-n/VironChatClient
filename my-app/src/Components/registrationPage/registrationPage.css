@@ -1,0 +1,134 @@
+.regBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  width: 700px;
+  background: #191919;
+  text-align: center;
+  margin: auto; }
+  .regBox input[type="email"]#yourLogin, .regBox input[type="password"]#yourPassword {
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: #FFFFFF;
+    border-radius: 24px;
+    transition: 0.25s;
+    width: 320px;
+    border: 2px solid #3498db; }
+    .regBox input[type="email"]#yourLogin:hover, .regBox input[type="password"]#yourPassword:hover {
+      width: 380px;
+      border-color: #2ecc71; }
+      @media (max-width: 460px) {
+        .regBox input[type="email"]#yourLogin:hover, .regBox input[type="password"]#yourPassword:hover {
+          width: 360px; } }
+      @media (max-width: 380px) {
+        .regBox input[type="email"]#yourLogin:hover, .regBox input[type="password"]#yourPassword:hover {
+          width: 330px; } }
+      @media (max-width: 340px) {
+        .regBox input[type="email"]#yourLogin:hover, .regBox input[type="password"]#yourPassword:hover {
+          width: 310px; } }
+    .regBox input[type="email"]#yourLogin:invalid, .regBox input[type="password"]#yourPassword:invalid {
+      border-color: #FF0000; }
+    @media (max-width: 460px) {
+      .regBox input[type="email"]#yourLogin, .regBox input[type="password"]#yourPassword {
+        width: 340px; } }
+    @media (max-width: 380px) {
+      .regBox input[type="email"]#yourLogin, .regBox input[type="password"]#yourPassword {
+        width: 290px; } }
+    @media (max-width: 340px) {
+      .regBox input[type="email"]#yourLogin, .regBox input[type="password"]#yourPassword {
+        width: 280px; } }
+  .regBox input[type="text"]#yourName, .regBox input[type="text"]#yourSurname {
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: #FFFFFF;
+    border-radius: 24px;
+    transition: 0.25s;
+    width: 470px;
+    border: 2px solid #3498db; }
+    .regBox input[type="text"]#yourName:hover, .regBox input[type="text"]#yourSurname:hover {
+      width: 530px;
+      border-color: #2ecc71; }
+      @media (max-width: 460px) {
+        .regBox input[type="text"]#yourName:hover, .regBox input[type="text"]#yourSurname:hover {
+          width: 360px; } }
+      @media (max-width: 380px) {
+        .regBox input[type="text"]#yourName:hover, .regBox input[type="text"]#yourSurname:hover {
+          width: 330px; } }
+      @media (max-width: 340px) {
+        .regBox input[type="text"]#yourName:hover, .regBox input[type="text"]#yourSurname:hover {
+          width: 310px; } }
+    .regBox input[type="text"]#yourName:invalid, .regBox input[type="text"]#yourSurname:invalid {
+      border-color: #FF0000; }
+    @media (max-width: 460px) {
+      .regBox input[type="text"]#yourName, .regBox input[type="text"]#yourSurname {
+        width: 340px; } }
+    @media (max-width: 380px) {
+      .regBox input[type="text"]#yourName, .regBox input[type="text"]#yourSurname {
+        width: 290px; } }
+    @media (max-width: 340px) {
+      .regBox input[type="text"]#yourName, .regBox input[type="text"]#yourSurname {
+        width: 280px; } }
+  .regBox .fileSelect {
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: #FFFFFF;
+    border-radius: 24px;
+    transition: 0.25s;
+    width: 270px;
+    border: 2px solid #f7f718; }
+    .regBox .fileSelect:hover {
+      width: 290px;
+      border-color: #2ecc71; }
+      @media (max-width: 460px) {
+        .regBox .fileSelect:hover {
+          width: 360px; } }
+      @media (max-width: 380px) {
+        .regBox .fileSelect:hover {
+          width: 330px; } }
+      @media (max-width: 340px) {
+        .regBox .fileSelect:hover {
+          width: 310px; } }
+    .regBox .fileSelect:invalid {
+      border-color: #FF0000; }
+    @media (max-width: 460px) {
+      .regBox .fileSelect {
+        width: 340px; } }
+    @media (max-width: 380px) {
+      .regBox .fileSelect {
+        width: 290px; } }
+    @media (max-width: 340px) {
+      .regBox .fileSelect {
+        width: 280px; } }
+  .regBox input[type="button"] {
+    background: none;
+    display: block;
+    margin: 25px auto;
+    border: 2px solid #FF0000;
+    padding: 12px;
+    text-align: center;
+    width: 150px;
+    outline: none;
+    color: #FFFFFF;
+    border-radius: 24px;
+    transition: .25s;
+    cursor: pointer; }
+    .regBox input[type="button"]:hover {
+      background: #FF0000; }
+
+.warnEmail {
+  color: #FF0000;
+  font-size: 12px; }

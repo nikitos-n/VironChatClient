@@ -1,15 +1,34 @@
-@mixin SignIn($backgroundCol, $backgroundColHover, $borderCol, $borderColHover, $color, $colorHover) {
-    background: $backgroundCol;
+@mixin SignIn($backgroundColHover, $borderCol) {
+
+    background: none;
     border: 2px solid $borderCol;
-    color: $color;
+    color: $grey;
+    display: block;
+    padding: 12px;
+    text-align: center;
+    outline: none;
+    border-radius: 24px;
+    transition: .25s;
+    cursor: pointer;
     &:hover {
         background: $backgroundColHover;
-        border-color: $borderColHover;
-        color: $colorHover; 
+        border-color: $white;
+        color: $white; 
     }
+
 }
 
-@mixin  AuthorizationForm($width, $widthHover, $borderColor, $borderColorHover) {
+@mixin  AuthorizationForm($width, $widthHover, $borderColor, $borderColorHover, $invalidColor: $red) {//Для Google и Facebook
+   
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: $white;
+    border-radius: 24px;
+    transition: 0.25s;
     width: $width;
     border: 2px solid $borderColor;
 
@@ -17,38 +36,102 @@
         width: $widthHover;
         border-color: $borderColorHover;
 
-        @media (max-width: 490px) {
-            width: 374.4px;
+        @media (max-width: 460px) {
+            width: 360px;
         }
 
-        @media (max-width: 415px) {
-            width: 304.2px;
+        @media (max-width: 380px) {
+            width: 330px;
         }
-
-        @media (max-width: 360px) {
-            width: 273px;
-          }
 
         @media (max-width: 340px) {
-            width: 249.6px;
-          }
-          
+            width: 310px;
+        }
+
     }
 
-      @media (max-width: 490px) {
-        width: 268.8px;
+    &:invalid {
+        border-color: $invalidColor;
     }
 
-    @media (max-width: 415px) {
-        width: 218.4px;
+    @media (max-width: 460px) {
+        width: 340px;
     }
 
-    @media (max-width: 360px) {
-        width: 196px;
-      }
+      @media (max-width: 380px) {
+        width: 290px;
+    }
 
     @media (max-width: 340px) {
-        width: 179.2px;
-      }
-      
+        width: 280px;
+    }
+
+}
+
+@mixin  boxForm($display: flex, $flexDirection: column, $alignItems: center, $justifyContent: center, //Для box авторизации и регистрации
+    $padding: 30px 0, $width: 500px, $background: $blackCol, $tetxAlign: center, $margin: auto) {
+
+        display: $display;
+        flex-direction: $flexDirection;
+        align-items: $alignItems;
+        justify-content: $justifyContent;
+        padding: $padding;
+        width: $width;
+        background: $background;
+        text-align: $tetxAlign;
+        margin: $margin;
+
+}
+
+@mixin InputButton($borderColor, $backgound){
+        
+        background: none;
+        display: block;
+        margin: 25px auto;
+        border: 2px solid $borderColor;
+        padding: 12px;
+        text-align: center;
+        width: 150px;
+        outline: none;
+        color: $white;
+        border-radius: 24px;
+        transition: .25s;
+        cursor: pointer;
+        &:hover{
+            background: $backgound;
+        }
+}
+
+@mixin thingModule(){
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &:after {
+        width: 200px;
+        display: block;
+        content: '';
+        border: 2px solid;
+        color: $red;
+    }
+}
+
+@mixin thingAvatar($color){
+    margin-top: 20px;
+    border: 4px solid $color;
+    height: 70px;
+    border-radius: 70px;
+}
+
+
+@mixin  rightBox (){
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }

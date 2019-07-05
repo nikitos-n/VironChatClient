@@ -1,28 +1,36 @@
 import React, {Component} from 'react';
 import FacebookLogin from 'react-facebook-login';
+import { comeInto } from '../../redux/Actions';
+import { connect } from 'react-redux';
 import './FacebookSignIn.css';
-import axios from 'axios';
 
 class FacebookSignIn extends Component {
 
-      render() {
-       return (
-           <div>  
+    responseFacebook = (response) => {
+        const {toMainPage, comeInto} = this.props;
+        const tokenID = response;
+        const tail = 'FacebookLogIn';
+        comeInto(toMainPage, tokenID, tail);
+    }
+
+    render() {
+        return (
+            <div>  
                 <FacebookLogin
-                    appId="1088597931155576"
-                    autoLoad={true}
+                    appId="2533177913399939"
+                    autoLoad={false}
                     fields="name,email,picture"
-                    onSuccess={alert("Hello")}
+                    callback={this.responseFacebook}
                     cssClass="class1"
                     icon={
                         <div className="FacebookButton">
-                            <i className="fab fa-facebook-f"> Войти через Facebook</i>
+                            <i className="fab fa-facebook-f">Войти через Facebook</i>
                         </div>
                     }
                 />
             </div>
-          )
-        }
-      }
-  
-  export default FacebookSignIn;
+        )
+    }
+}
+
+export default connect(null, {comeInto})(FacebookSignIn);

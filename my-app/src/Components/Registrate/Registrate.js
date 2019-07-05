@@ -4,7 +4,7 @@ import './Registrate.css'
 export default class Registrate extends Component {
     render(){
         return(
-            <div className="askRegistrate">Зарегестрироваться?</div>
+            <div className="askRegistrate" onClick={this.props.toRegistratePage}>Зарегестрироваться?</div>
         )
     }
 }

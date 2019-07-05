@@ -1,9 +1,7 @@
 .askRegistrate {
-    color: #b7b758;
-    margin-top:  20px;
-}
+  color: #b7b758;
+  margin-top: 20px; }
 
-.askRegistrate:hover{
-    color: #f7f718;
-    cursor: pointer;
-}
+.askRegistrate:hover {
+  color: #f7f718;
+  cursor: pointer; }

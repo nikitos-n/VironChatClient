@@ -1,0 +1,26 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.regBox {
+   
+    @include boxForm($width: 700px);
+    input[type = "email"]#yourLogin, input[type = "password"]#yourPassword{
+        @include AuthorizationForm(320px, 380px, $inputborderColor, $inputborderColorFocus);
+    }
+    input[type = "text"]#yourName, input[type = "text"]#yourSurname{
+        @include AuthorizationForm(470px, 530px, $inputborderColor, $inputborderColorFocus);
+    }
+
+    .fileSelect{
+        @include AuthorizationForm(270px, 290px, $yellow, $inputborderColorFocus);
+    }
+
+    input[type="button"] {
+        @include InputButton($red, $red);
+    }
+}
+
+.warnEmail{
+    color: $red;
+    font-size: 12px;
+}

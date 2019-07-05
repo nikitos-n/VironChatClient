@@ -1,0 +1,25 @@
+.messageBorder {
+  max-width: 100%;
+  padding-bottom: 10px; }
+
+.rigthSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.leftSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.myMessage {
+  max-width: 40%;
+  border-radius: 20px;
+  padding: 5px;
+  background: #3498db; }
+
+.anotherMessage {
+  max-width: 40%;
+  border-radius: 20px;
+  padding: 5px;
+  background: #FF0000; }

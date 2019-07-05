@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import './Greeting.css' 
 
-class Greeting extends Component {
+class MessageBox extends Component {
 
     render(){
         return(
-            <div>Начинай работать</div>
+            <div className="greeting">
+                <div>Войдите в меню и начните переписку!</div>
+            </div>
         )
     }
 }
 
-export default Greeting;
+export default MessageBox;

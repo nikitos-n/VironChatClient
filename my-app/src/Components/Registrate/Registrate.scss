@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.askRegistrate {
+    color: $darkYellow;
+    margin-top:  20px;
+}
+
+.askRegistrate:hover{
+    color: $yellow;
+    cursor: pointer;
+}

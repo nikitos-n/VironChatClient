@@ -1,0 +1,19 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.roomsModule {
+    @include thingModule();
+    cursor: pointer;
+    &:hover{
+        opacity: 0.3;
+    }
+}
+
+.roomsAvatar {
+    @include thingAvatar($purple);
+}
+
+.roomsData {
+    color: $inputborderColor;
+}
+
